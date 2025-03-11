@@ -27,7 +27,7 @@ app.get('/api', async (req, res) => {
         const rtime = endTime - startTime;
         
         let time = "";
-        if (responseTime < 1000) {
+        if (rtime < 1000) {
             time = `${rtime}ms`;
         } else if (rtime < 60000) {
             time = `${(rtime / 1000).toFixed(2)}s`;
